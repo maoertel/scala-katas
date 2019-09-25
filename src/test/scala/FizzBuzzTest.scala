@@ -6,7 +6,7 @@ class FizzBuzzTest extends WordSpec with MustMatchers {
 
     "match FizzBuzz base rules" in {
       import FizzBuzz.fizzBuzzRules
-      val result = FizzBuzz.fizzBuzz2(15)
+      val result = FizzBuzz.fizzBuzz(1 to 15)
       result.head must be("1")
       result(2) must be("Fizz")
       result(4) must be("Buzz")
@@ -15,7 +15,7 @@ class FizzBuzzTest extends WordSpec with MustMatchers {
 
     "match FizzBuzz extended rules" in {
       import FizzBuzz.fizzBuzzRulesExtended
-      val result = FizzBuzz.fizzBuzz2(100)
+      val result = FizzBuzz.fizzBuzz(1 to 100)
       result.head must be("1")
       result(2) must be("FizzFizz")
       result(4) must be("BuzzBuzz")
